@@ -515,4 +515,146 @@ describe("Lexer", () => {
       expect(lex(source)).toEqual(expected);
     });
   });
+
+  // ============================================================
+  // 14. Edge Cases
+  // ============================================================
+
+  describe("14. Edge Cases", () => {
+    it("lexes empty string literal", () => {
+      expect(lex('""')).toEqual([
+        { type: "STRING", value: "" },
+        { type: "EOF" },
+      ]);
+    });
+
+    it("lexes multiple empty strings", () => {
+      expect(lex('"" ""')).toEqual([
+        { type: "STRING", value: "" },
+        { type: "STRING", value: "" },
+        { type: "EOF" },
+      ]);
+    });
+
+    it("lexes operators without spaces (a+b)", () => {
+      expect(lex("a+b")).toEqual([
+        { type: "IDENTIFIER", value: "a" },
+        { type: "PLUS" },
+        { type: "IDENTIFIER", value: "b" },
+        { type: "EOF" },
+      ]);
+    });
+
+    it("lexes unary minus in expressions (+ -3)", () => {
+      expect(lex("5 + -3")).toEqual([
+        { type: "NUMBER", value: 5 },
+        { type: "PLUS" },
+        { type: "MINUS" },
+        { type: "NUMBER", value: 3 },
+        { type: "EOF" },
+      ]);
+    });
+
+    it("lexes increment-like pattern without spaces (a+b+c)", () => {
+      expect(lex("a+b+c")).toEqual([
+        { type: "IDENTIFIER", value: "a" },
+        { type: "PLUS" },
+        { type: "IDENTIFIER", value: "b" },
+        { type: "PLUS" },
+        { type: "IDENTIFIER", value: "c" },
+        { type: "EOF" },
+      ]);
+    });
+
+    it("lexes mixed operators (+ - * / %)", () => {
+      expect(lex("a+-b*c")).toEqual([
+        { type: "IDENTIFIER", value: "a" },
+        { type: "PLUS" },
+        { type: "MINUS" },
+        { type: "IDENTIFIER", value: "b" },
+        { type: "STAR" },
+        { type: "IDENTIFIER", value: "c" },
+        { type: "EOF" },
+      ]);
+    });
+
+    it("lexes string with special characters", () => {
+      expect(lex('"!@#$%^&*()"')).toEqual([
+        { type: "STRING", value: "!@#$%^&*()" },
+        { type: "EOF" },
+      ]);
+    });
+
+    it("lexes string with equals sign", () => {
+      expect(lex('"a=b"')).toEqual([
+        { type: "STRING", value: "a=b" },
+        { type: "EOF" },
+      ]);
+    });
+
+    it("lexes identifiers with digits (Bug 1)", () => {
+      expect(lex("var1 temp_2 x123")).toEqual([
+        { type: "IDENTIFIER", value: "var1" },
+        { type: "IDENTIFIER", value: "temp_2" },
+        { type: "IDENTIFIER", value: "x123" },
+        { type: "EOF" },
+      ]);
+    });
+  });
+
+  // ============================================================
+  // 15. Lexer Errors
+  // ============================================================
+
+  describe("15. Lexer Errors", () => {
+    it("throws error on unexpected character @", () => {
+      expect(() => lex("let x @ 5")).toThrow(
+        /Unexpected character '@' at position \d+/,
+      );
+    });
+
+    it("throws error on unexpected character #", () => {
+      expect(() => lex("x # y")).toThrow(
+        /Unexpected character '#' at position \d+/,
+      );
+    });
+
+    it("throws error on unexpected character $", () => {
+      expect(() => lex("let $x = 10")).toThrow(
+        /Unexpected character '\$' at position \d+/,
+      );
+    });
+
+    it("throws error on unexpected character `", () => {
+      expect(() => lex("let x = `hello`")).toThrow(
+        /Unexpected character '`' at position \d+/,
+      );
+    });
+
+    it("throws error on unexpected character ^", () => {
+      expect(() => lex("a ^ b")).toThrow(
+        /Unexpected character '\^' at position \d+/,
+      );
+    });
+
+    it("throws error with position info", () => {
+      expect(() => lex("let x = @")).toThrow(SyntaxError);
+    });
+
+    it("throws error on unclosed double quote string", () => {
+      expect(() => lex('"hello')).toThrow();
+    });
+
+    it("throws error on unclosed single quote string", () => {
+      expect(() => lex("'hello")).toThrow();
+    });
+
+    it("throws error on mismatched quotes (Bug 2)", () => {
+      expect(() => lex("'hello\"")).toThrow();
+    });
+
+    it("throws error on mismatched quotes reversed", () => {
+      expect(() => lex("\"hello'")).toThrow();
+    });
+  });
 });
