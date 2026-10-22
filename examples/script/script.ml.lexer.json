@@ -1,0 +1,880 @@
+[
+  {
+    "type": "LET"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "name"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "STRING",
+    "value": "world"
+  },
+  {
+    "type": "LET"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "age"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "NUMBER",
+    "value": 23
+  },
+  {
+    "type": "LET"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "active"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "TRUE"
+  },
+  {
+    "type": "LET"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "nothing"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "NULL"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "name"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "age"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "active"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "LET"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "a"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "NUMBER",
+    "value": 10
+  },
+  {
+    "type": "LET"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "b"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "NUMBER",
+    "value": 3
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "a"
+  },
+  {
+    "type": "PLUS"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "b"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "a"
+  },
+  {
+    "type": "MINUS"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "b"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "a"
+  },
+  {
+    "type": "STAR"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "b"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "a"
+  },
+  {
+    "type": "SLASH"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "b"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "a"
+  },
+  {
+    "type": "PERCENT"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "b"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "a"
+  },
+  {
+    "type": "GREATER"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "b"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "a"
+  },
+  {
+    "type": "EQUAL_EQUAL"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "b"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "a"
+  },
+  {
+    "type": "BANG_EQUAL"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "b"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "TRUE"
+  },
+  {
+    "type": "AND"
+  },
+  {
+    "type": "FALSE"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "TRUE"
+  },
+  {
+    "type": "OR"
+  },
+  {
+    "type": "FALSE"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "BANG"
+  },
+  {
+    "type": "TRUE"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "LET"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "x"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "NUMBER",
+    "value": 10
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "x"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "x"
+  },
+  {
+    "type": "PLUS"
+  },
+  {
+    "type": "NUMBER",
+    "value": 5
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "x"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "x"
+  },
+  {
+    "type": "STAR"
+  },
+  {
+    "type": "NUMBER",
+    "value": 2
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "x"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IF"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "x"
+  },
+  {
+    "type": "GREATER"
+  },
+  {
+    "type": "NUMBER",
+    "value": 20
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "LEFT_BRACE"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "STRING",
+    "value": "x is large"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "RIGHT_BRACE"
+  },
+  {
+    "type": "ELSE"
+  },
+  {
+    "type": "LEFT_BRACE"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "STRING",
+    "value": "x is small"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "RIGHT_BRACE"
+  },
+  {
+    "type": "LET"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "i"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "NUMBER",
+    "value": 0
+  },
+  {
+    "type": "WHILE"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "i"
+  },
+  {
+    "type": "LESS"
+  },
+  {
+    "type": "NUMBER",
+    "value": 5
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "LEFT_BRACE"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "i"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "i"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "i"
+  },
+  {
+    "type": "PLUS"
+  },
+  {
+    "type": "NUMBER",
+    "value": 1
+  },
+  {
+    "type": "RIGHT_BRACE"
+  },
+  {
+    "type": "FN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "add"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "a"
+  },
+  {
+    "type": "COMMA"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "b"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "LEFT_BRACE"
+  },
+  {
+    "type": "RETURN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "a"
+  },
+  {
+    "type": "PLUS"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "b"
+  },
+  {
+    "type": "RIGHT_BRACE"
+  },
+  {
+    "type": "LET"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "result"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "add"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "NUMBER",
+    "value": 10
+  },
+  {
+    "type": "COMMA"
+  },
+  {
+    "type": "NUMBER",
+    "value": 20
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "result"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "FN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "factorial"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "n"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "LEFT_BRACE"
+  },
+  {
+    "type": "IF"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "n"
+  },
+  {
+    "type": "LESS_EQUAL"
+  },
+  {
+    "type": "NUMBER",
+    "value": 1
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "LEFT_BRACE"
+  },
+  {
+    "type": "RETURN"
+  },
+  {
+    "type": "NUMBER",
+    "value": 1
+  },
+  {
+    "type": "RIGHT_BRACE"
+  },
+  {
+    "type": "RETURN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "n"
+  },
+  {
+    "type": "STAR"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "factorial"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "n"
+  },
+  {
+    "type": "MINUS"
+  },
+  {
+    "type": "NUMBER",
+    "value": 1
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "RIGHT_BRACE"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "factorial"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "NUMBER",
+    "value": 5
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "FN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "greet"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "name"
+  },
+  {
+    "type": "COMMA"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "times"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "LEFT_BRACE"
+  },
+  {
+    "type": "LET"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "i"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "NUMBER",
+    "value": 0
+  },
+  {
+    "type": "WHILE"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "i"
+  },
+  {
+    "type": "LESS"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "times"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "LEFT_BRACE"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "print"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "STRING",
+    "value": "Hello "
+  },
+  {
+    "type": "PLUS"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "name"
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "i"
+  },
+  {
+    "type": "EQUAL"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "i"
+  },
+  {
+    "type": "PLUS"
+  },
+  {
+    "type": "NUMBER",
+    "value": 1
+  },
+  {
+    "type": "RIGHT_BRACE"
+  },
+  {
+    "type": "RIGHT_BRACE"
+  },
+  {
+    "type": "IDENTIFIER",
+    "value": "greet"
+  },
+  {
+    "type": "LEFT_PAREN"
+  },
+  {
+    "type": "STRING",
+    "value": "world"
+  },
+  {
+    "type": "COMMA"
+  },
+  {
+    "type": "NUMBER",
+    "value": 3
+  },
+  {
+    "type": "RIGHT_PAREN"
+  },
+  {
+    "type": "EOF"
+  }
+]

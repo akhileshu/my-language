@@ -1,0 +1,210 @@
+Program
+├── VariableDeclaration
+│   ├── name: "name"
+│   └── value: StringLiteral("world")
+│
+├── VariableDeclaration
+│   ├── name: "age"
+│   └── value: NumberLiteral(23)
+│
+├── VariableDeclaration
+│   ├── name: "active"
+│   └── value: BooleanLiteral(true)
+│
+├── VariableDeclaration
+│   ├── name: "nothing"
+│   └── value: NullLiteral
+│
+├── CallExpression
+│   ├── callee: Identifier("print")
+│   └── arguments:
+│       └── Identifier("name")
+│
+├── CallExpression
+│   ├── callee: Identifier("print")
+│   └── arguments:
+│       └── Identifier("age")
+│
+├── CallExpression
+│   ├── callee: Identifier("print")
+│   └── arguments:
+│       └── Identifier("active")
+│
+├── VariableDeclaration
+│   ├── name: "a"
+│   └── value: NumberLiteral(10)
+│
+├── VariableDeclaration
+│   ├── name: "b"
+│   └── value: NumberLiteral(3)
+│
+├── CallExpression
+│   ├── callee: Identifier("print")
+│   └── arguments:
+│       └── BinaryExpression
+│           ├── operator: "+"
+│           ├── left: Identifier("a")
+│           └── right: Identifier("b")
+│
+├── CallExpression
+│   └── arguments:
+│       └── BinaryExpression("-", a, b)
+│
+├── CallExpression
+│   └── arguments:
+│       └── BinaryExpression("*", a, b)
+│
+├── CallExpression
+│   └── arguments:
+│       └── BinaryExpression("/", a, b)
+│
+├── CallExpression
+│   └── arguments:
+│       └── BinaryExpression("%", a, b)
+│
+├── CallExpression
+│   └── arguments:
+│       └── BinaryExpression(">", a, b)
+│
+├── CallExpression
+│   └── arguments:
+│       └── BinaryExpression("==", a, b)
+│
+├── CallExpression
+│   └── arguments:
+│       └── BinaryExpression("!=", a, b)
+│
+├── CallExpression
+│   └── arguments:
+│       └── BinaryExpression("&&", true, false)
+│
+├── CallExpression
+│   └── arguments:
+│       └── BinaryExpression("||", true, false)
+│
+├── CallExpression
+│   └── arguments:
+│       └── UnaryExpression
+│           ├── operator: "!"
+│           └── operand: true
+│
+├── VariableDeclaration
+│   ├── name: "x"
+│   └── value: NumberLiteral(10)
+│
+├── AssignmentExpression
+│   ├── target: Identifier("x")
+│   └── value:
+│       BinaryExpression("+", x, 5)
+│
+├── AssignmentExpression
+│   ├── target: Identifier("x")
+│   └── value:
+│       BinaryExpression("*", x, 2)
+│
+├── CallExpression
+│   └── arguments:
+│       └── Identifier("x")
+│
+├── IfStatement
+│   ├── condition:
+│   │   BinaryExpression(">", x, 20)
+│   ├── then:
+│   │   BlockStatement
+│   │   └── CallExpression(print, "x is large")
+│   └── else:
+│       BlockStatement
+│       └── CallExpression(print, "x is small")
+│
+├── VariableDeclaration
+│   ├── name: "i"
+│   └── value: NumberLiteral(0)
+│
+├── WhileStatement
+│   ├── condition:
+│   │   BinaryExpression("<", i, 5)
+│   └── body:
+│       BlockStatement
+│       ├── CallExpression(print, i)
+│       └── AssignmentExpression
+│           ├── target: i
+│           └── value:
+│               BinaryExpression("+", i, 1)
+│
+├── FunctionDeclaration
+│   ├── name: "add"
+│   ├── parameters: ["a", "b"]
+│   └── body:
+│       BlockStatement
+│       └── ReturnStatement
+│           └── BinaryExpression("+", a, b)
+│
+├── VariableDeclaration
+│   ├── name: "result"
+│   └── value:
+│       CallExpression
+│       ├── callee: add
+│       └── arguments: [10, 20]
+│
+├── CallExpression
+│   └── arguments:
+│       └── Identifier("result")
+│
+├── FunctionDeclaration
+│   ├── name: "factorial"
+│   ├── parameters: ["n"]
+│   └── body:
+│       BlockStatement
+│       ├── IfStatement
+│       │   ├── condition:
+│       │   │   BinaryExpression("<=", n, 1)
+│       │   └── then:
+│       │       BlockStatement
+│       │       └── ReturnStatement
+│       │           └── NumberLiteral(1)
+│       │
+│       └── ReturnStatement
+│           └── BinaryExpression
+│               ├── operator: "*"
+│               ├── left: Identifier("n")
+│               └── right:
+│                   CallExpression
+│                   ├── callee: factorial
+│                   └── arguments:
+│                       BinaryExpression("-", n, 1)
+│
+├── CallExpression
+│   └── arguments:
+│       CallExpression(factorial, 5)
+│
+├── FunctionDeclaration
+│   ├── name: "greet"
+│   ├── parameters: ["name", "times"]
+│   └── body:
+│       BlockStatement
+│       ├── VariableDeclaration
+│       │   ├── name: "i"
+│       │   └── value: NumberLiteral(0)
+│       │
+│       └── WhileStatement
+│           ├── condition:
+│           │   BinaryExpression("<", i, times)
+│           └── body:
+│               BlockStatement
+│               ├── CallExpression
+│               │   └── arguments:
+│               │       BinaryExpression
+│               │           ├── operator: "+"
+│               │           ├── left: StringLiteral("Hello ")
+│               │           └── right: Identifier("name")
+│               │
+│               └── AssignmentExpression
+│                   ├── target: i
+│                   └── value:
+│                       BinaryExpression("+", i, 1)
+│
+└── CallExpression
+    ├── callee: Identifier("greet")
+    └── arguments:
+        ├── StringLiteral("world")
+        └── NumberLiteral(3)

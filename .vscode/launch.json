@@ -1,0 +1,58 @@
+{
+  "version": "0.2.0",
+  "inputs": [
+    {
+      "id": "bunTestNamePattern",
+      "type": "promptString",
+      "description": "Test name regex (bun test -t)",
+      "default": "lexes single-character operators"
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Bun test (current file)",
+      "type": "bun",
+      "request": "launch",
+      "runtime": "bun",
+      "program": "test",
+      "args": ["${relativeFile}"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopOnEntry": false
+    },
+    {
+      "name": "Bun test (current file, name filter)",
+      "type": "bun",
+      "request": "launch",
+      "runtime": "bun",
+      "program": "test",
+      "args": ["${relativeFile}", "-t", "${input:bunTestNamePattern}"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopOnEntry": false
+    },
+    {
+      "name": "Bun debug (current file)",
+      "type": "bun",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopOnEntry": false
+    },
+    {
+      "name": "Attach to Bun",
+      "type": "bun",
+      "request": "attach",
+      "url": "ws://127.0.0.1:6499/",
+      "stopOnEntry": false
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Bun: current file",
+      "configurations": ["Bun test (current file)"],
+      "stopAll": true
+    }
+  ]
+}
